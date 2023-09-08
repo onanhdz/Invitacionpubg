@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TE AMO LUU</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <style>
+
+        #imagen {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.p1').hover(function(){
+                arriba = Math.random() * (400-1) + 1;
+                abajo = Math.random() * (609-1) + 1;
+                $(this).css('top', arriba);
+                $(this).css('left', abajo);
+            });
+        });
+
+        function dijoSi() {
+            
+            $('.opciones').hide();
+            
+            
+            document.getElementById('imagen').style.display = 'block';
+            
+            // Reproducir el audio
+            var audio = new Audio('medios/audio1.mp3');
+            audio.play();
+            
+    
+            alert('Gracias bb, sabía que dirias que si. Entra que pa luego es tarde :3         ATT: Eskin Montiel  (Da clic en aceptar -->)');
+        }
+    </script>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>¿Quieres jugar pubg?</h1>
+        </div>
+        <div class="opciones">
+            <p class="p1">No</p>
+            <p onclick="dijoSi()" class="p2">Si</p>
+        </div>
+       
+        <img id="imagen" src="medios/imagen1.jpeg" style="display: none;"> 
+    </div>
+</body>
+</html>
+
+
+
+
