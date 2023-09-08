@@ -1,85 +1,99 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background: #c5dfe2;
     background-image: url('medios/imagen2.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat; 
-
-    
-}
-
-.contenedor{
-    margin: auto;
-    width: 900px;
-    margin-top: 300px;
-    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     font-family: "Georgia", sans-serif;
 }
 
-.titulo{
+.contenedor {
+    margin: auto;
+    width: 90%;
+    max-width: 900px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.titulo {
     margin-bottom: 20px;
 }
 
-.opciones p{
+.opciones p {
     background: black;
-    display: initial;
+    display: inline-block;
     padding: 12px;
     color: #cabe10;
     border-radius: 2px;
     font-weight: bold;
+    margin: 5px;
+    position: absolute;
+    transition: transform 0.3s, background-color 0.3s, cursor 0.3s;
 }
 
-p.p1{
-    position: absolute;
-    top: 400px;
+.opciones p.p1 {
     left: 500px;
-    width: 100px;
-}
-p.p1:hover{
-    background: gray;
-    cursor: pointer;
+    top: 400px;
 }
 
-p.p2{
-    position: absolute;
-    top: 400px;
+.opciones p.p2 {
     left: 750px;
-    width: 100px;
+    top: 400px;
 }
-p.p2:hover{
+
+.opciones p.p1:hover,
+.opciones p.p2:hover {
     background: gray;
     cursor: pointer;
+    transform: translate(10px, -10px); /* Mueve el botón cuando se hace hover */
 }
-#si{
+
+#si {
     background: #515050;
-    left: 420px;
-    position: absolute;
-    top: 122px;
-    width: 550px;
+    width: 90%;
+    max-width: 550px;
     color: #ffffff;
-    padding: 50px;
+    padding: 20px;
     display: none;
+    margin: 0 auto;
 }
 
 #imagen {
     display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%; 
+    width: 80%;
+    max-width: 100%;
+    margin: 20px auto;
 }
 
-
 #texto-superior {
-    position: absolute;
-    top: 25px; 
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 24px; 
-    color: rgb(0, 0, 0); 
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+}
+
+/* Media query para estilos móviles */
+@media screen and (max-width: 768px) {
+    .contenedor {
+        margin-top: 10px;
+    }
+
+    p.p1, p.p2 {
+        top: auto;
+        left: auto;
+        width: auto;
+        position: static;
+    }
+
+    #si {
+        width: 90%;
+        max-width: none;
+    }
+
+    #imagen {
+        width: 100%;
+    }
 }
