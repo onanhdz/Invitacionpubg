@@ -2,20 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TE AMO LUU</title>
+    <title>TE AMO LUU 💜</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <style>
 
-        #imagen {
-            display: none;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script 
+    defer 
+    src="https://app.embed.im/snow.js"></script>
     <script>
         $(document).ready(function(){
             $('.p1').hover(function(){
@@ -27,8 +24,10 @@
         });
 
         function dijoSi() {
-            
+           
             $('.opciones').hide();
+            
+            document.getElementById('texto-superior').style.display = 'block'; // Mostrar el texto superior
             
             
             document.getElementById('imagen').style.display = 'block';
@@ -38,7 +37,7 @@
             audio.play();
             
     
-            alert('Sabía que dirias que si bb. Entra que pa luego es tarde :3  ATT: Eskin Montiel  (Da clic en aceptar -->)');
+            alert('Gracias bb, sabía que dirias que si. Entra que pa luego es tarde :3  ATT: Eskin Montiel  (Da clic en aceptar -->)');
         }
     </script>
 </head>
@@ -51,8 +50,10 @@
             <p class="p1">No</p>
             <p onclick="dijoSi()" class="p2">Si</p>
         </div>
-       
-        <img id="imagen" src="medios/imagen1.jpeg" style="display: none;"> 
+        <div id="imagen-container">
+            <p id="texto-superior" style="display: none;">💜LOVIU MI CHERNOBYL💜</p>
+            <img id="imagen" src="medios/imagen1.jpeg" style="display: none;"> 
+        </div>
     </div>
 </body>
 </html>
